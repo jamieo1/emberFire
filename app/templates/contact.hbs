@@ -1,0 +1,16 @@
+<!--
+on clearing alert, form should clear and message of blah should appear in a green box
+-->
+
+{{#if responseMessage}}
+  <div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> {{responseMessage}}</div>
+{{/if}}
+
+<div class="form-group">
+  <label>Send us your message</label>
+    <input type="text" class="form-control" id="" placeholder="Your e-mail address" rows="7" value={{email}}>
+    <br>
+    <input type="text" class="form-control" id="" placeholder="Your message. (At least 5 characters)" rows="7" value={{message}}>
+    <br>
+    <button type="button" class="btn btn-info" disabled={{willSend}} {{action 'saveMessage'}}>Send</button>
+</div>

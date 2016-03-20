@@ -4,6 +4,11 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'library-app',
     environment: environment,
+    //contentSecurityPolicy to firebase is setting connection to firebase server
+    contentSecurityPolicy:{
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com"
+    },
+    firebase: 'https://resplendent-heat-8144.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -21,10 +26,10 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    //ENV.APP.LOG_ACTIVE_GENERATION = true;
+    //ENV.APP.LOG_TRANSITIONS = true;
+    //ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    //ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {
