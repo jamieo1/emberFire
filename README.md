@@ -1,7 +1,6 @@
 # Library-app
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+From when I was dipping my toe in Javascript and followed a tutorial.  I loved how Ember was set up, but in the end it was too opinionated for me and opted for Angular.
 
 ## Prerequisites
 
